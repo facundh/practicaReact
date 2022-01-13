@@ -7,9 +7,9 @@ export const todoReducer = (state = [] , action) => {
     // siempre y cuando las condiciones sean puntuales
 
     switch ( action.type ) {
+        // para añadir el nuevo todo utilizo el spread para hacer una copia de mis todos anteriores
+        // y añado el todo con el action.payload
         case 'add':
-            // para añadir el nuevo todo utilizo el spread para hacer una copia de mis todos anteriores
-            // y añado el todo con el action.payload
             return [...state, action.payload];
         
         case 'delete':
